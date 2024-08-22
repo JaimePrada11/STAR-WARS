@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "Star-Wars";
+    src: url('./Fuentes/Starjedi.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #000; 
+    width: 100vw;
+    height: 100vh;
+    font-family: "Star-Wars";
+    color: white;
+    background-image: url(https://www.shutterstock.com/shutterstock/videos/22001752/thumb/1.jpg?ip=x480);
+}
+
+.Home{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content:flex-start;
+    margin: auto;
+
+
+}
+
+.Home h1{
+    font-family: "Star-Wars";
+    color: yellow;
+    font-size: 10vw;
+}
+
+.Home button{
+    background-color: red;
+    width: 10rem;
+    height: 5rem;
+    font-family:"Star-Wars" ;
+    color: white;
+    font-size: large;
+    border-radius: 5rem;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.header__list{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__item{
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__link{
+    text-decoration: none; 
+    color: inherit; 
+    display: flex; 
+    text-align: center; 
+    flex-direction: column; 
+    align-items: center; 
+    font-family: 'Courier New', Courier, monospace;
+    transition-duration: 0.5s;
+}
+
+a{
+    text-decoration: none; 
+    color: inherit;
+}
+
+.header__link:hover{
+    color: yellow;
+    transition-duration: 1s;
+    filter: sepia(1) saturate(10) brightness(1.2);
+}
+
+.Logos{
+    width: 4rem;
+    height: auto;
+}
+
+.Inicio{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.Inicio img{
+    width: 100dvw;
+    height: fit-content;
+}
+
+.Personajes{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
