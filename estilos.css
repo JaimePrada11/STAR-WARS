@@ -183,6 +183,19 @@ a{
     border-radius: 20%;
 }
 
+.ContainerPadre{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    gap:2vw;
+    flex-wrap: wrap;
+    width: 60vw;
+    overflow-y: scroll;
+    height: 60vh;
+    scrollbar-width: none;
+}
+
 .Tarjeta{
     display: flex;
     flex-direction: row;
@@ -190,12 +203,11 @@ a{
     justify-content: center;
     gap:2vw;
     flex-wrap: wrap;
-    width: 50vw;
+    width: 60vw;
     overflow-y: scroll;
     height: 60vh;
     scrollbar-width: none;
 }
-
 .Tarjeta div{
     background-color: white;
     border-radius: 10%;
@@ -254,3 +266,139 @@ footer{
     background-color: #000;
     text-align: center;
 }
+
+.texto_incio{
+    margin: 0.5vw;
+    font-size: 2.5vw;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0.8vw;
+    text-align: center;
+    padding: 5vw;
+    width: 80%;
+}
+.Container{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    justify-content: center;
+    align-items: center; 
+}
+.titulo2{
+text-align: center;
+font-size: 2rem;
+text-shadow: 0px 0px 3px rgb(255, 255, 255);
+margin: 1vw;
+color: #FFD700;
+
+
+}
+.label{
+    margin: 0.5vw;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0.8vw;
+    text-align: center;
+}
+
+
+
+.label_titulo{
+    font-size: 2.5rem;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    margin: 0%;
+    color: #00CCFF;
+    font-weight: 500;
+}
+
+.ContainerPadre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40vw;
+    font-size: 4em;
+}
+
+
+p {
+    flex-grow: 1;
+  }
+
+.ContainerUnidad{
+    display: flex;
+   background-color:#3f2c7533;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 15vw;
+   height: 20vw;
+   border-radius: 5%;
+   margin: 1.5vw;
+   border: solid, 0.3vw,#00CCFF;
+   box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+.ContainerPadre img{
+    width: 4vw;
+    margin: 0.5vw;
+    background-color: black;
+}
+.Aperttura{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.vehiculo{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+.text_vehiculos{
+    width: 100%;
+}
+.Peliculas{
+    width: 45vw;
+}
+@media (max-width: 1000px) {
+
+    .ContainerUnidad{
+        min-width: 80vw;
+        margin: 5vw;
+        padding-bottom: 2vw;
+    }
+    .label{
+        width: 90%;
+        font-size: 5.5vw;
+    }
+    .Container{
+       
+        width: 90%;
+        
+    }
+    .titulo{
+        font-size: 8vw;
+    }
+    .img{
+        width: 20vw;
+        margin: 0.5vw;
+    }
+    .label_titulo{
+        font-size: 6vw;
+    }
+
+    
+    .texto_incio{
+        margin: 0.5vw;
+        font-size: 6.5vw;
+        color: rgb(255, 255, 255);
+        margin-bottom: 0.8vw;
+        text-align: center;
+        padding: 5vw;
+        width: 80%;
+          
+        }
+
+    }
+
+  
