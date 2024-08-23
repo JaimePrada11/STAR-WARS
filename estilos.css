@@ -148,9 +148,10 @@ a{
 }
 
 .Inicio .gif{
-    position: absolute;
-    top: 150vh;
+    position: fixed;
+    bottom: 0;
     left: 0;
+    z-index: 999;
     width: 10vw;
 }
 .Inicio img{
@@ -217,11 +218,7 @@ a{
 .Tarjeta h1{
     color: red;
 }
-.Planetas img{
-    background-color: white;
-    border-radius: 10%;
-    opacity: 60%;
-}
+
 
 .Especies {
     width: 100vw;
@@ -338,6 +335,7 @@ p {
    margin: 1.5vw;
    border: solid, 0.3vw,#00CCFF;
    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+   font-family: "DINN";
 }
 .ContainerPadre img{
     width: 4vw;
