@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Film Details</title>
+</head>
+<body>
+    <h1 id="film-title"></h1>
+    <p id="film-release-date"></p>
+
+    <h2>People</h2>
+    <div id="people-container"></div>
+
+    <h2>Planets</h2>
+    <div id="planets-container"></div>
+
+    <h2>Starships</h2>
+    <div id="starships-container"></div>
+
+    <h2>Vehicles</h2>
+    <div id="vehicles-container"></div>
+
+    <h2>Species</h2>
+    <div id="species-container"></div>
+
+    <script>
+        fetch('https://swapi.py4e.com/api/films/1/')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(filmData => {
+    // Mostrar información básica de la película
+    console.log(filmData);
+    document.getElementById('film-title').innerText = filmData.title;
+    document.getElementById('film-release-date').innerText = filmData.release_date;
+
+    // Obtener URLs de personas, planetas, etc.
+    const peopleUrls = filmData.characters;
+    const planetsUrls = filmData.planets;
+    const starshipsUrls = filmData.starships;
+    const vehiclesUrls = filmData.vehicles;
+    const speciesUrls = filmData.species;
+
+    // Llamar a las funciones para obtener y mostrar la información relacionada
+    getAndDisplayData('people', peopleUrls);
+    getAndDisplayData('planets', planetsUrls);
+    getAndDisplayData('starships', starshipsUrls);
+    getAndDisplayData('vehicles', vehiclesUrls);
+    getAndDisplayData('species', speciesUrls);
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+  });
+  function getAndDisplayData(type, urls) {
+  const container = document.getElementById(`${type}-container`);
+  container.innerHTML = ''; // Limpiar el contenedor
+
+  urls.forEach(url => {
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Crear un elemento para mostrar la información
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.innerText = `${type.slice(0, -1).toUpperCase()}: ${data.name || data.title}`;
+        container.appendChild(item);
+      })
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+      });
+  });
+}
+    </script>
+</body>
+</html>

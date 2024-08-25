@@ -12,75 +12,104 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: Matterhorn;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("https://static-mh.content.disney.io/matterhorn/assets/matterhorn/sans/matterhorn-regular-b6b4f5da5330.eot?#iefix") format("embedded-opentype"),url("https://static-mh.content.disney.io/matterhorn/assets/matterhorn/sans/matterhorn-regular-eed88f0756d6.woff") format("woff"),url("https://static-mh.content.disney.io/matterhorn/assets/matterhorn/sans/matterhorn-regular-07d90ea407f5.ttf") format("truetype"),url("https://static-mh.content.disney.io/matterhorn/assets/matterhorn/sans/matterhorn-regular-bc3e22ea86d1.svg#Matterhorn") format("svg")
+}
+
+
+:root {
+    --text-color: #859B99;
+    --bg-color: #020101;
+    --a-color: white;
+    --text-size: 1.5vw;
+}
+
 body {
     margin: 0;
-    background-color: #000; 
-    width: 100vw;
-    height: 100vh;
-    font-family: "Star-Wars";
-    color: white;
-    background-image: url(https://www.shutterstock.com/shutterstock/videos/22001752/thumb/1.jpg?ip=x480);
-    overflow-x: hidden;
-}
-
-.Home{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content:flex-start;
-    margin: auto;
-
-}
-
-.Home h1{
-    font-family: "Star-Wars";
-    color: yellow;
-    font-size: 10vw;
-}
-
-.Home button{
-    background-color: red;
-    width: 10rem;
-    height: 5rem;
-    font-family:"Star-Wars" ;
-    color: white;
-    font-size: large;
-    border-radius: 5rem;
-
-}
-
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
     background-color: black;
-    position: sticky;
-    height: 100px;
-    width: 100%;
-    top: 0;
-    z-index: 99;
-    font-family: "DINN";
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-image: url(https://t4.ftcdn.net/jpg/02/22/57/71/360_F_222577179_MTxLtAKP3nwY5LEyKva28oCt0xO4qxJ2.jpg);
+    background-size: cover;
 }
 
-.header__list{
+.Home {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    list-style: none;
-    text-transform: uppercase;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Matterhorn";
+    position: relative;
+    text-align: center;
+}
+
+.Home h1 {
+    font-family: "Matterhorn";
+    color: yellow;
+    font-size: clamp(1.75rem, 3.5rem, 7rem);
+}
+
+.Home button {
+    background-image: url(https://www.ambientum.com/wp-content/uploads/2024/04/space-4984262_1280-696x464.jpg);
+    background-size: cover;
+    width: 10rem;
+    height: 4rem;
+    font-family: inherit;
+    color: white;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 25px 15px #003366;
+    letter-spacing: 0.5px;
+    transition: all .5s ease;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 1);
+}
+
+.Home button:hover {
+    letter-spacing: 5px;
+    color: yellow;
+    background-image: url(https://imagenes.muyinteresante.com/files/article_social_75/uploads/2023/10/26/653a70fe92542.jpeg);
+    box-shadow: 0px 0px 30px 15px #4A148C;
+    scale: 1.1;
+}
+
+.Home button:active {
+    letter-spacing: 7px;
+    color: white;
+    background-image: url(https://www.ambientum.com/wp-content/uploads/2024/04/space-4984262_1280-696x464.jpg);
+    box-shadow: 0px 0px 25px 15px #003366;
+    transition: 0.5s;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-image: URL("https://lumiere-a.akamaihd.net/v1/images/sw-skeleton-crew-tentpole-desktop_ceb6c251.jpeg?region=0,0,1600,600&width=1536");
+    background-position: bottom ;
+    background-size: cover;
+    padding: 15px;
+}
+
+.header__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header__item{
-    margin:1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    list-style: none;
+    display: none;
 }
 
 .header__link{
@@ -93,20 +122,15 @@ header{
     transition-duration: 0.5s;
 }
 
-a{
-    text-decoration: none; 
-    color: inherit;
-}
-
-.header__link:hover{
-    color: yellow;
-    transition-duration: 1s;
-    filter: sepia(1) saturate(10) brightness(1.2);
-}
-
 .Logos{
     width: 4rem;
-    height: auto;
+}
+
+.Menu-h:checked ~ .header__nav .header__item {
+    display: block;
+}
+.Menu-h:checked ~ input {
+    display: none;
 }
 
 .submenu {
@@ -114,7 +138,7 @@ a{
     position: absolute;
     top: 100%; 
     left: 0;
-    background-color: #000;
+    background-color: #000000;
     padding: 0.5rem;
     list-style: none;
     margin: 0;
@@ -139,118 +163,160 @@ a{
 .header__item:hover .submenu {
     display: block;
 }
-
-.Inicio{
+.Inicio {
     width: 100vw;
-    height: 100vh;
-    text-align: center;
-    background-color: #000;
-}
-
-.Inicio .gif{
-    position: absolute;
-    top: 150vh;
-    left: 0;
-    width: 10vw;
-}
-.Inicio img{
-    width: 100dvw;
     height: auto;
-}
-
-.opc{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.Personajes {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-.Personajes img{
-    width: 35vw;
-    height: 35vw;
-    background-color: white;
-    opacity: 80%;
-    border-radius: 20%;
-}
-
-.Tarjeta{
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: center;
-    gap:2vw;
-    flex-wrap: wrap;
-    width: 50vw;
-    overflow-y: scroll;
-    height: 60vh;
-    scrollbar-width: none;
-}
-
-.Tarjeta div{
-    background-color: white;
-    border-radius: 10%;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-}
-.Tarjeta h1{
-    color: red;
-}
-.Planetas img{
-    background-color: white;
-    border-radius: 10%;
-    opacity: 60%;
-}
-
-.Especies {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    max-height: fit-content;
+    background-color: #000;
+    color: white;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
-.Especies img{
-    width: 30vw;
+.Skeleton {
+    width: 100%;
 }
 
-.Planetas{
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-}
-
-.titulo{
+.Info {
     position: absolute;
     top: 0;
 }
-.Peliculas img{
-    width: 70vw;
-}
-.Vehiculos img{
-    width: 50vw;
-}
-.Planetas img{
-    width: 50vw;
 
+.Carrusel {
+    width: 100vw;
+    height: 10rem;
+    display: flex;
+    white-space: nowrap;
+    box-sizing: border-box;
 }
 
-footer{
-    background-color: #000;
+.Carrusel-item {
+    width: 0px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .5;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+
+.Carrusel-item:hover {
+    width: 10rem;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.Carrusel:hover>.Carrusel-item:not(:hover) {
+    filter: blur(5px);
+}
+
+
+.Contenedor{
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    color: white;
     text-align: center;
+    margin: 0;
+    font-family: "Matterhorn";
+    position: relative;
+    background-color: black;
+}
+.titulo{
+    color: yellow;
+    font-size: 3rem;
+    margin: 0;
+    margin-top: 1rem;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.imagencontenedor, .ImagenStarwars{
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 5px darkblue;
+}
+
+.ContenedorImagen h2 {
+    color: yellow;
+    position: absolute;
+    top: 50vw;
+    left: 4vw;
+}
+.Contenedor p{
+    font-size: clamp(1rem, 1.2rem, 1.5rem);
+    margin: 0.5rem 1.2rem;
+    padding: 0.2rem;
+}
+.ImagenStarwars{
+    position: relative;
+    left: -8vw;
+    margin-left: 1rem;
+    margin-bottom: 5vw;
+}
+.frase{
+    color: yellow;
+    position: absolute;
+    bottom: 42%;
+    right: 2%;
+    font-size: clamp(1rem, 1.5rem, 1.7rem);
+    text-align: right;
+}
+
+.ContainerPadre{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100vw;
+    border-radius: 20px;
+    position: relative;
+}
+
+.ContenedorPadre{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 50vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    gap: 2rem 0.5rem;
+    border-radius: 20px;
+    margin: 10vw 0vw;
+    position: relative;
+    gap: 1rem;
+}
+.ContainerUnidad{
+    min-height: 40vw;
+    width: 80vw;
+    max-width: 100%;
+    height: auto;
+    min-height: 40vh;
+    padding: 0.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#3f2c7533;
+    border-radius: 5%;
+    border: solid, 0.3vw,#00CCFF;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    overflow: hidden;
+    margin: 5vw;
+}
+.label_titulo {
+    color: yellow;
+}
+.titulo2{
+    color: red;
+}
+
+.imagencontenedor {
+    background-color: white;
+}
+
+.logop{
+    width: 4rem;
 }
