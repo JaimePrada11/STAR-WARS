@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Wars</title>
+  <link rel="stylesheet" href="./Estilos.css" />
+  <link rel="icon"
+    href="https://lumiere-a.akamaihd.net/v1/images/sw-favicon-acolyte_19659d3f.png?region=0%2C0%2C512%2C512" />
+</head>
+
+<body>
+  <section class="Home">
+    <h1>STAR WARS</h1>
+    <a href="#Inicio" class="button-link">START</a>
+  </section>
+
+  <main>
+    <header>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+      <label for="menu-toggle" class="menu-icon">
+        <img
+          src="https://static-mh.content.disney.io/matterhorn/assets/starwars/navigation/SW_Burger_White-09a4d3d1e252.svg"
+          alt="abrir" class="open">
+        <img
+          src="https://static-mh.content.disney.io/matterhorn/assets/starwars/navigation/SW_Burger_Close_White-a5617cc36d88.svg"
+          alt="Close" class="close">
+      </label>
+      <nav class="header__nav">
+
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#Personajes" class="header__link" data-category="characters">
+              <img src="./Multimedia/Personajes.png" alt="Personajes" class="Logos" />
+              Characters</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="#" data-key="height" class="submenu__link">Height</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="birth_year" class="submenu__link">Birth</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="eye_color" class="submenu__link">Eyes</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="hair_color" class="submenu__link">Hair</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="skin_color" class="submenu__link">Skin</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="gender" class="submenu__link">Gender</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__item">
+            <a href="#Especies" data-category="species" class="header__link">
+              <img src="./Multimedia/Especies.png" alt="Especies" class="Logos" />
+              Especies</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="#" data-key="classification" class="submenu__link">Classification</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="designation" class="submenu__link">Designation</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="language" class="submenu__link">Language</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="average_height" class="submenu__link">Average Height</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="average_lifespan" class="submenu__link">Average lifespan</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__item">
+            <a href="#Naves" class="header__link" data-category="starships">
+              <img src="./Multimedia/Naves.png" alt="Naves" class="Logos" />
+              Starships</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="#" data-key="model" class="submenu__link">Model</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="starship_class" class="submenu__link">Starship class</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="passengers" class="submenu__link">Passengers</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="hyperdrive_rating" class="submenu__link">Hyperdrive rating</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="consumables" class="submenu__link">Consumables</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__item">
+            <a href="#Vehiculos" class="header__link" data-category="vehicles">
+              <img src="./Multimedia/Vehiculos.png" alt="Vehiculos" class="Logos" />
+              Vehicles</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="#" data-key="cargo_capacity" class="submenu__link">Cargo capacity</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="consumables" class="submenu__link">Consumables</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="cost_in_credits" class="submenu__link">Cost</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="created" class="submenu__link">Created</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="manufacturer" class="submenu__link">Manufacturer</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="model" class="submenu__link">Model</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="vehicle_class" class="submenu__link">Vehicle class</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__item">
+            <a href="#Planetas" class="header__link" data-category="planets">
+              <img src="./Multimedia/Planetas.png" alt="Planetas" class="Logos" />
+              Planets</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="#" data-key="diameter" class="submenu__link">Diameter</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="rotation_period" class="submenu__link">Rotation Period</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="gravity" class="submenu__link">Gravity</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="population" class="submenu__link">Population</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="surface_water" class="submenu__link">Surface water</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__item">
+            <a href="#Peliculas" class="header__link" data-category="films">
+              <img src="./Multimedia/Peliculas.png" alt="Peliculas" class="Logos" />
+              Movies</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="#" data-key="director" class="submenu__link">Director</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="episode_id" class="submenu__link">Episode</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="edited" class="submenu__link">Edited</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="opening_crawl" class="submenu__link">Opening</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="producer" class="submenu__link">Producer</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#" data-key="release_date" class="submenu__link">Release date</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png?region=0,0,586,254"
+        alt="logo starwars" class="Logo_starwars">
+    </header>
+
+    <section class="Inicio" id="Inicio">
+      <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180319171854/iStock-480194313-1.jpg" alt="Skeleton Crew" class="Skeleton">
+      <div class="Carrusel">
+        <img src="https://img.europapress.es/fotoweb/fotonoticia_20150620132813_690.jpg" alt="Luke Skywalker"
+          class="Carrusel-item">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/darth-vader-main_4560aff7.jpeg?region=71%2C0%2C1139%2C854"
+          alt="Darth_Vader" class="Carrusel-item">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/leia-organa-main_9af6ff81.jpeg?region=493%2C153%2C787%2C787"
+          alt="Princesa Leia" class="Carrusel-item">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/Yoda-Retina_2a7ecc26.jpeg?region=0%2C0%2C1536%2C768"
+          alt="Yoda" class="Carrusel-item">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/c-3po-main_d6850e28.jpeg?region=336%2C0%2C537%2C536"
+          alt="C-3P0" class="Carrusel-item">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/r2-d2-main_f315b094.jpeg?region=167%2C0%2C1071%2C536"
+          alt="R2-D2" class="Carrusel-item">
+        <img src="https://sm.ign.com/t/ign_latam/screenshot/default/aakin_h9w7.1280.jpg" alt="Anikin"
+          class="Carrusel-item">
+        <img src="https://e.rpp-noticias.io/xlarge/2022/05/26/255725_1264107.jpg" alt="" class="Carrusel-item">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/chewie-main_e1968a8a.jpeg?region=27%2C0%2C535%2C536"
+          alt="Chewbacca" class="Carrusel-item">
+      </div>
+    </section>
+
+    <section class="Contenedor" id="Contenedor">
+      <h1 class="titulo" id="titulo">STAR WARS</h1>
+      <div class="ContenedorImagen" id="ContenedorImagen">
+        <img src="https://e.rpp-noticias.io/large/2023/04/26/102810_1420506.jpg" alt="Star Wars" id="imagencontenedor"
+          class="imagencontenedor">
+        <h2> MAY THE FORCE BE WITH YOU</h2>
+        <p class="texto">Star Wars is an American epic space opera media franchise created by George Lucas, which began
+          with the eponymous 1977 film and quickly became a worldwide pop culture phenomenon. </p>
+      </div>
+      <div class="ContainerPadre" id="lista">
+        <p class="texto">The franchise has been expanded into various films and other media, including television
+          series, video games, novels, comic books, theme park attractions, and themed areas, comprising an
+          all-encompassing fictional universe.</p>
+        <img src="https://media.revistagq.com/photos/604b2f499fc97c95e82c1c14/master/pass/2101913.jpg" alt=""
+          class="ImagenStarwars">
+        <h2 class="frase">KEEP CALM AND USE THE FORCE</h2>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
